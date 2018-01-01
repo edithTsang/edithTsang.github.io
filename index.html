@@ -70,6 +70,7 @@
     a:hover {
         color: #f33;
     }
+
     </style>
     <script type="text/javascript">
 
@@ -95,9 +96,20 @@
     <p><a href="https://github.com/edithTsang" target="_blank">Github</a></p>
     <p><a href="http://weibo.com/zengyuling0827" target="_blank">微博</a></p>
     <p><a href="https://www.zhihu.com/people/edithTsang/" target="_blank">知乎</a></p>
+    <p onclick="Show_Hidden(tr1)"><a href="javascript:0;">微信</a></p>
+    <p id="tr1" style="display:none;"><a href=""><span style="color:#5fac48">WeChat</span>:edith0827</a></p>
 </div>
 <canvas></canvas>
 <script>
+    function Show_Hidden(trid) {
+        if (trid.style.display == "block") {
+            trid.style.display = 'none';
+        } else {
+            trid.style.display = 'block';
+        }
+    }
+
+
     document.addEventListener('touchmove', function (e) {
         e.preventDefault()
     })
@@ -144,7 +156,7 @@
     document.ontouchstart = i
     i()
 
-
+//prohibit
        function click(e) {
             if (document.all) {
                 if (event.button == 2 || event.button == 3) {
